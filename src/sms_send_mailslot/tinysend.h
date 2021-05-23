@@ -7,7 +7,6 @@
 #define TINYSEND_H
 
 #include <Windows.h>
-#include <iostream>
 
 class TinySend
 {

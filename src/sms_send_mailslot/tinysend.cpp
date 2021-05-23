@@ -4,6 +4,7 @@
  */
 
 #include "tinysend.h"
+#include <iostream>
 
 TinySend::TinySend()
     : m_mailslot(0)
