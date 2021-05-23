@@ -1,3 +1,7 @@
+/**
+ * @copyright Copyright (c) Yuji Iwanaga
+ * @date 23th May. 2021
+ */
 
 #include "tinyrecv.h"
 

@@ -1,13 +1,17 @@
+/**
+ * @copyright Copyright (c) Yuji Iwanaga
+ * @date 23th May. 2021
+ */
 
 #include "tinyrecv.h"
 #include <iostream>
 
 TinyRecv::TinyRecv()
-  : m_mailslot(0)
-  , m_nextSize(0)
-  , m_msgs(0)
-  , m_numByteRead(0)
-  , m_status(FALSE)
+    : m_mailslot(0)
+    , m_nextSize(0)
+    , m_msgs(0)
+    , m_numByteRead(0)
+    , m_status(FALSE)
 {}
 
 bool TinyRecv::init()
