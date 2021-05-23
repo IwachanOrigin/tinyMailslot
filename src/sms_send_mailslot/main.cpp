@@ -14,20 +14,20 @@ int main(int argc, char **argv)
     DWORD numBytesWritten;
 
     // create mail slot.
-    hSMS_slot = CreateFile("\\\\.\\mailslot\\sms", GENERIC_WRITE, FILE_SHARE_READ, (LPSECURITY_ATTRIBUTES)NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, (HANDLE)NULL);
+    hSMS_slot = CreateFile(L"\\\\.\\mailslot\\sms", GENERIC_WRITE, FILE_SHARE_READ, (LPSECURITY_ATTRIBUTES)NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, (HANDLE)NULL);
     if (hSMS_slot == INVALID_HANDLE_VALUE) {
         std::cerr << "failed" << std::endl;
         return -1;
     }
 
     // create send message.
-    GetComputerName(buffer, &bufferLen);
+    GetComputerNameA(buffer, &bufferLen);
     strcpy(toSendTxt, "send string from this computer : ");
     strcat(toSendTxt, buffer);
 
     while (1) {
         std::cout << "sending..." << std::endl;
-        status = WriteFile(hSMS_slot, toSendTxt, (DWORD)strlen(toSendTxt) + 1, &numBytesWritten, (LPOVERLAPPED)NULL);
+        status = WriteFile(hSMS_slot, toSendTxt, (DWORD)(strlen(toSendTxt)) + 1, &numBytesWritten, (LPOVERLAPPED)NULL);
         // error check
         if (!status) {
             std::cerr << "failed" << std::endl;
