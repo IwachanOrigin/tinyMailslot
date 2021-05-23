@@ -1,6 +1,6 @@
 # tinyMailslot
-The Windows have the mail slot service.
-This software is sending messages by use the mail slot service.
+The Windows have the mail slot service.  
+This software is sending messages by use the mail slot service.  
 The mail slot service is useful for communication between processes.
 
 ## Dependency
@@ -9,7 +9,7 @@ The mail slot service is useful for communication between processes.
 ## Setup
 1. git clone this repository.
 2. open 'transparentStringScroll.sln'
-3. Please Build & Run😁
+3. Please Build & Run😁  
 (Please start the receiver first) 
 
 ## License
